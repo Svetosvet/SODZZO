@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — FIVI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .legal{ max-width:720px; margin:0 auto; padding:56px 24px 80px; position:relative; z-index:1; }
+  .legal h1{ font-family:var(--font-display); font-size:1.9rem; margin:0 0 8px; }
+  .legal .updated{ color:var(--muted); font-size:0.85rem; margin:0 0 36px; }
+  .legal h2{ font-family:var(--font-display); font-size:1.15rem; margin:32px 0 10px; }
+  .legal p, .legal li{ color:var(--text); font-size:0.95rem; line-height:1.65; }
+  .legal ul{ padding-left:20px; margin:10px 0; }
+  .legal a{ color:var(--blue); }
+  .back-link{ display:inline-block; margin-bottom:24px; color:var(--muted); font-size:0.85rem; text-decoration:none; }
+  .back-link:hover{ color:var(--text); }
+</style>
+</head>
+<body>
+
+<div class="bg-glow"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark"></span>
+    <span class="brand-name">FIVI</span>
+  </div>
+</header>
+
+<main class="legal">
+  <a class="back-link" href="index.html">← Back to FIVI</a>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: July 2026</p>
+
+  <p>
+    FIVI is a video search tool that lets you search YouTube, Vimeo, and Dailymotion
+    at once and watch results without leaving the page. This page explains what
+    happens with your information when you use it.
+  </p>
+
+  <h2>What FIVI stores</h2>
+  <p>
+    FIVI has no user accounts and no server-side database. The only data it keeps
+    is stored locally in your own browser, using <code>localStorage</code>:
+  </p>
+  <ul>
+    <li><strong>Favorites</strong> — videos you choose to save, so they're there next time you open FIVI on this device.</li>
+    <li><strong>History</strong> — videos you've opened, kept so you can find them again.</li>
+  </ul>
+  <p>
+    This data never leaves your device or browser. It is not sent to any FIVI
+    server, because FIVI doesn't have one that stores user data. Clearing your
+    browser's site data for FIVI deletes it permanently.
+  </p>
+
+  <h2>What happens when you search</h2>
+  <p>
+    When you type a search, FIVI sends your search term directly to the video
+    platforms' own search systems so it can show you results:
+  </p>
+  <ul>
+    <li>
+      <strong>YouTube</strong> — search requests are relayed through a small server-side
+      function so FIVI's API credentials stay off the public internet; Google/YouTube
+      only sees the search term itself, sent from FIVI's server. FIVI's use of this
+      API is governed by the
+      <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a>,
+      and Google's handling of that request is described in the
+      <a href="https://www.google.com/policies/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.
+    </li>
+    <li>
+      <strong>Vimeo</strong> — search requests are relayed through a small server-side
+      function so FIVI's API credentials stay off the public internet; Vimeo only
+      sees the search term itself. See the
+      <a href="https://vimeo.com/privacy" target="_blank" rel="noopener">Vimeo Privacy Policy</a>.
+    </li>
+    <li>
+      <strong>Dailymotion</strong> — search requests go directly to Dailymotion's
+      public search API. See the
+      <a href="https://legal.dailymotion.com/en/privacy-policy/" target="_blank" rel="noopener">Dailymotion Privacy Policy</a>.
+    </li>
+  </ul>
+  <p>
+    Each platform may independently log requests (such as your IP address) as part
+    of operating their own service — that happens under their privacy policies
+    linked above, not FIVI's, since FIVI never sees or stores that information itself.
+  </p>
+
+  <h2>Watching a video</h2>
+  <p>
+    When you open a video, FIVI embeds that platform's own player (YouTube, Vimeo,
+    or Dailymotion). Once playback starts, you are interacting directly with that
+    platform's player and subject to its own privacy practices, linked above.
+  </p>
+
+  <h2>No advertising, no tracking, no third-party analytics</h2>
+  <p>
+    FIVI does not run ads, does not use tracking cookies, and does not share any
+    data with advertisers or analytics companies.
+  </p>
+
+  <h2>Changes to this policy</h2>
+  <p>
+    If this policy changes, the updated version will be posted on this page with a
+    new "Last updated" date.
+  </p>
+</main>
+
+</body>
+</html>

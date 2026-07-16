@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FIVI — search every platform at once</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="bg-glow"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark"></span>
+    <span class="brand-name">FIVI</span>
+  </div>
+
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <button class="tab active" data-tab="home" role="tab" aria-selected="true">Home</button>
+    <button class="tab" data-tab="favorites" role="tab" aria-selected="false">Favorites</button>
+    <button class="tab" data-tab="history" role="tab" aria-selected="false">History</button>
+  </nav>
+</header>
+
+<main>
+
+  <section class="search-hero">
+    <h1>One search bar.<br><span class="accent">Every video platform.</span></h1>
+    <p class="sub">YouTube, Vimeo, Twitch and Dailymotion, side by side — no tabs, no accounts.</p>
+
+    <form id="search-form" class="search-bar" autocomplete="off">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+        <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <input id="search-input" type="text" placeholder="Search for anything…" aria-label="Search videos">
+      <button type="submit">Search</button>
+    </form>
+
+    <div class="platform-pills" role="group" aria-label="Filter by platform">
+      <button class="pill active" data-platform="all"><span class="dot dot-all"></span>All</button>
+      <button class="pill" data-platform="youtube"><span class="dot dot-youtube"></span>YouTube</button>
+      <button class="pill" data-platform="vimeo"><span class="dot dot-vimeo"></span>Vimeo</button>
+      <button class="pill" data-platform="twitch"><span class="dot dot-twitch"></span>Twitch</button>
+      <button class="pill" data-platform="dailymotion"><span class="dot dot-dailymotion"></span>Dailymotion</button>
+    </div>
+  </section>
+
+  <section id="status" class="status" hidden></section>
+
+  <section id="results" class="grid" aria-live="polite"></section>
+
+  <section id="empty-state" class="empty-state">
+    <div class="empty-glyph"></div>
+    <h2 id="empty-title">Search to get started</h2>
+    <p id="empty-text">Try an artist, a topic, or a channel name — results from every connected platform land here.</p>
+  </section>
+
+  <footer class="site-footer">
+    <p class="footer-note">
+      FIVI is an independent search tool and is not affiliated with, sponsored by,
+      or endorsed by YouTube, Vimeo, or Dailymotion. By using FIVI you also agree to be
+      bound by the
+      <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a>.
+    </p>
+    <nav class="footer-links" aria-label="Legal and platform links">
+      <a href="privacy.html">Privacy Policy</a>
+      <span class="footer-sep">·</span>
+      <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms</a>
+      <span class="footer-sep">·</span>
+      <a href="https://vimeo.com/terms" target="_blank" rel="noopener">Vimeo Terms</a>
+      <span class="footer-sep">·</span>
+      <a href="https://legal.dailymotion.com/en/terms-of-use/" target="_blank" rel="noopener">Dailymotion Terms</a>
+    </nav>
+  </footer>
+
+</main>
+
+<!-- Player overlay -->
+<div id="player-overlay" class="player-overlay" hidden>
+  <div class="player-box">
+    <button id="player-close" class="player-close" aria-label="Close player">✕</button>
+    <div id="player-frame-wrap" class="player-frame-wrap"></div>
+    <div class="player-meta">
+      <h3 id="player-title"></h3>
+      <div class="player-actions">
+        <button id="player-favorite" class="ghost-btn">☆ Save to Favorites</button>
+        <span id="player-platform-tag" class="tag"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Video card template -->
+<template id="card-template">
+  <article class="card">
+    <button class="card-thumb-btn">
+      <img class="card-thumb" alt="">
+      <span class="card-duration"></span>
+      <span class="card-platform-badge"></span>
+    </button>
+    <div class="card-body">
+      <h3 class="card-title"></h3>
+      <p class="card-channel"></p>
+    </div>
+    <button class="card-fav" aria-label="Save to favorites">☆</button>
+  </article>
+</template>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
