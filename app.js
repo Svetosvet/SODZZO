@@ -1,5 +1,5 @@
 // ==========================================================
-// FIVI — multi-platform video search
+// SODZZO — multi-platform video search
 // ==========================================================
 
 const PLATFORM_COLORS = {
@@ -40,10 +40,10 @@ const store = {
   set(key, val){ localStorage.setItem(key, JSON.stringify(val)); }
 };
 
-function getFavorites(){ return store.get('fivi_favorites'); }
-function setFavorites(list){ store.set('fivi_favorites', list); }
-function getHistory(){ return store.get('fivi_history'); }
-function setHistory(list){ store.set('fivi_history', list); }
+function getFavorites(){ return store.get('sodzzo_favorites'); }
+function setFavorites(list){ store.set('sodzzo_favorites', list); }
+function getHistory(){ return store.get('sodzzo_history'); }
+function setHistory(list){ store.set('sodzzo_history', list); }
 
 function isFavorite(id){ return getFavorites().some(v => v.id === id); }
 
