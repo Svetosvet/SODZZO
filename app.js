@@ -306,4 +306,3 @@ els.form.addEventListener('submit', (e) => {
 
 // ---------- Init ----------
 hideEmpty();
-showEmpty('Search to get started', 'Try an artist, a topic, or a channel name — results from every connected platform land here.');
